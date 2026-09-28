@@ -2,8 +2,8 @@
 class Ided < Formula
   desc "Parametric graphic design: token-only React artifacts checked like code"
   homepage "https://github.com/trevin-lee/ided"
-  url "https://github.com/trevin-lee/ided/releases/download/v0.1.0/ided-0.1.0.tgz"
-  sha256 "d6987c13ddde57d71d60c8dfd68f813a6da10ec476ad2f44b9dcd5a0017c7124"
+  url "https://github.com/trevin-lee/ided/releases/download/v0.2.0/ided-0.2.0.tgz"
+  sha256 "8aa3545dae92c512514540554abb967e3a5f66d18697412661e628a25ec18a6b"
   license "MIT"
 
   depends_on "node"
@@ -22,6 +22,9 @@ class Ided < Formula
       PDF and PNG export use a pinned Chromium, downloaded on the first
       export (about 100 MB), or now with:
         ided browser install
+
+      Before uninstalling, remove the skills and MCP server from your agents:
+        ided setup --remove
     EOS
   end
 
