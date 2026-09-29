@@ -2,8 +2,8 @@
 class IdeDesign < Formula
   desc "Parametric graphic design: token-only React artifacts checked like code"
   homepage "https://github.com/trevin-lee/ide-design"
-  url "https://github.com/trevin-lee/ide-design/releases/download/v0.3.1/ide-design-0.3.1.tgz"
-  sha256 "db0e584b4e06cfa30ddc1a7139eef039b29ab4ae65055092502aaaaab6222243"
+  url "https://github.com/trevin-lee/ide-design/releases/download/v0.4.0/ide-design-0.4.0.tgz"
+  sha256 "40f218f9c6441dc55fb88e684c2ec6e69d173844f2340b73d2528dfb0b0fdc37"
   license "MIT"
 
   depends_on "node"
@@ -31,7 +31,8 @@ class IdeDesign < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/ided --version")
     system bin/"ided", "init", "--here", "--name", "Brew Test"
-    assert_match "Clean", shell_output("#{bin}/ided check")
+    # The layout check measures frames in a browser, which the test sandbox cannot download.
+    assert_match "Clean", shell_output("#{bin}/ided check --no-layout")
     system bin/"ided", "export", "brand", "--out", "out"
     assert_path_exists testpath/"out/brew-test-brand-kit/logos/mark/mark-primary.svg"
   end
