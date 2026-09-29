@@ -1,8 +1,8 @@
 class Prusactl < Formula
   desc "Hand your Prusa 3D printer to an AI agent (MCP server, with a CLI to set it up)"
   homepage "https://github.com/trevin-lee/prusactl"
-  url "https://github.com/trevin-lee/prusactl/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "39e1c0975c42c8479cd81a40f2b26ecebebd6a26fa2097de2ec6febef343fc8f"
+  url "https://github.com/trevin-lee/prusactl/archive/refs/tags/v0.1.5.tar.gz"
+  sha256 "4186539fe138d06489fda44077fe33b7d9f37a99873652f972a78ebca3b817e4"
   license "MIT"
   head "https://github.com/trevin-lee/prusactl.git", branch: "main"
 
@@ -16,7 +16,7 @@ class Prusactl < Formula
 
   test do
     assert_match version.to_s, shell_output("#{bin}/prusactl --version")
-    # No printer set up: it should say so and exit non-zero, not crash.
+    # With nothing set up, status should say so rather than crash.
     output = shell_output("#{bin}/prusactl status 2>&1")
     assert_match "prusactl setup", output
   end
