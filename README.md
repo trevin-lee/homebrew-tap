@@ -13,5 +13,12 @@ brew install trevin-lee/tap/ide-design
 ```
 
 Installing by the full name trusts that one formula or cask (Homebrew's tap trust).
-ide-design was called `ided` before 0.3.0; `brew update` moves existing installs to the new name.
+ide-design was called `ided` before 0.3.0. Trust applies to the name, so an existing install moves
+over with:
+
+```sh
+brew trust --formula trevin-lee/tap/ide-design
+brew update && brew migrate ided && brew upgrade ide-design
+```
+
 Both are published here by their own release workflows; don't edit them by hand.
