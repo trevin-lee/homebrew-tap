@@ -2,8 +2,8 @@
 class IdeDesign < Formula
   desc "Parametric graphic design: token-only React artifacts checked like code"
   homepage "https://github.com/trevin-lee/ide-design"
-  url "https://github.com/trevin-lee/ide-design/releases/download/v0.6.0/ide-design-0.6.0.tgz"
-  sha256 "c97c34517e156d3ddd77e6882d4a89a16040235cedeebb5807b1230aa28b59d2"
+  url "https://github.com/trevin-lee/ide-design/releases/download/v0.7.0/ide-design-0.7.0.tgz"
+  sha256 "13f0d96fe0b2da851768ac13070473741ae06d1fa411a18fff3497aaec48289f"
   license "MIT"
 
   depends_on "node"
