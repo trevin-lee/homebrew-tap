@@ -2,8 +2,8 @@
 class IdeDesign < Formula
   desc "Parametric graphic design: token-only React artifacts checked like code"
   homepage "https://github.com/trevin-lee/ide-design"
-  url "https://github.com/trevin-lee/ide-design/releases/download/v0.8.0/ide-design-0.8.0.tgz"
-  sha256 "6eca3a453d8a512b233ee43087d7c8a19ed9e88f8888fab4401b9097a996d773"
+  url "https://github.com/trevin-lee/ide-design/releases/download/v0.9.0/ide-design-0.9.0.tgz"
+  sha256 "41709066705bbff23b60537aa0b63b3805374aa3f17906bbdfbbcb30f3c9947b"
   license "MIT"
 
   depends_on "node"
@@ -19,12 +19,14 @@ class IdeDesign < Formula
       Connect ided to Claude Code and Codex (skills and MCP server):
         ided setup
 
-      PDF and PNG export use a pinned Chromium, downloaded on the first
-      export (about 100 MB), or now with:
+      The layout check, screenshots and exports use a pinned Chromium,
+      downloaded the first time one needs it (about 100 MB), or now with:
         ided browser install
 
-      Before uninstalling, remove the skills and MCP server from your agents:
+      Before uninstalling, remove the skills and MCP server from your agents,
+      and the downloaded Chromium:
         ided setup --remove
+        ided browser remove
     EOS
   end
 
