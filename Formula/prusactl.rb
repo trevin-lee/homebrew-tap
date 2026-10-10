@@ -1,8 +1,8 @@
 class Prusactl < Formula
   desc "Hand your Prusa 3D printer to an AI agent (MCP server, with a CLI to set it up)"
   homepage "https://github.com/trevin-lee/prusactl"
-  url "https://github.com/trevin-lee/prusactl/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "9f2c31557bc22b1a8550c8b654cb2b7696593cecc5879088ae2c81f9aff0fb01"
+  url "https://github.com/trevin-lee/prusactl/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "e05b114ae73ebeedf17cd294057542fb02bbfe604a96aa188b801e98153f16e1"
   license "MIT"
   head "https://github.com/trevin-lee/prusactl.git", branch: "main"
 
