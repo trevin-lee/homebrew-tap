@@ -1,8 +1,8 @@
 class ClaudeRouter < Formula
-  desc "Keep several Claude accounts signed in at once, switch between them, see usage"
+  desc "Use several Claude accounts as one, with a shared setup and automatic switching"
   homepage "https://github.com/trevin-lee/claude-router"
-  url "https://github.com/trevin-lee/claude-router/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "3f4c6f50e74e65a92a6c022c6e5bd1877d4499a774ecfa84642f24496dcba587"
+  url "https://github.com/trevin-lee/claude-router/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "24768f121280539e138794ef6150c59fc40832497e12cdacd13d5bceea473091"
   license "MIT"
   head "https://github.com/trevin-lee/claude-router.git", branch: "main"
 
@@ -18,8 +18,8 @@ class ClaudeRouter < Formula
     <<~EOS
       Sign each account in once:
         claude-router login 0
-      Then start Claude Code as an account with:
-        claude-router use 0
+      Then let claude pick the account with the most room, in ~/.zshrc:
+        claude() { claude-router launch "$(whence -p claude)" "$@"; }
     EOS
   end
 
