@@ -1,8 +1,8 @@
 class ClaudeRouter < Formula
   desc "Use several Claude accounts as one, with a shared setup and automatic switching"
   homepage "https://github.com/trevin-lee/claude-router"
-  url "https://github.com/trevin-lee/claude-router/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "24768f121280539e138794ef6150c59fc40832497e12cdacd13d5bceea473091"
+  url "https://github.com/trevin-lee/claude-router/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "c1ca5b77ef5d235b35fb61622ef2ec926520fc48cd1ef3603620e097c2dfadd9"
   license "MIT"
   head "https://github.com/trevin-lee/claude-router.git", branch: "main"
 
